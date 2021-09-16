@@ -12,7 +12,7 @@ app.use(express.json())
 //connecting to database:
 
 mongoose.connect(
-    process.env.db,{useNewUrlParser:true,useUnifiedTopology:true},
+    'mongodb+srv://PritiPurbey:priti%401234@cluster0.xfcon.mongodb.net/Firstdatabase?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true},
     () => console.log('Database connected..')
 );
 
@@ -24,5 +24,9 @@ const routes = require('./Routes/Routes')
 
 app.use('/api',routes)
 
-app.listen(9000,()=>console.log('Listening to the port..'))
+app.get("/Hello",(req,res)=>{
+    res.send("Hello World")
+})
+
+app.listen(process.env.PORT || 8081,()=>console.log('Listening to the port..'))
 
