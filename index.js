@@ -1,7 +1,7 @@
 
 const express = require('express')
 const mongoose = require('mongoose')
-const dotenv = require('dotenv')
+const path = require("path");
 const cors = require('cors')
 const app = express()
 dotenv.config()
@@ -24,8 +24,8 @@ const routes = require('./Routes/Routes')
 
 app.use('/api',routes)
 
-app.get("/Hello",(req,res)=>{
-    res.send("Hello World")
+app.get("/",(req,res)=>{
+    res.sendFile(path.resolve("./static/index.html"));
 })
 
 app.listen(process.env.PORT || 8081,()=>console.log('Listening to the port..'))
