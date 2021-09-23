@@ -11,6 +11,10 @@ const UserSchema = new Schema ({
         type:String,
         required:[true,"Email required"]
     },
+    Password :{
+        type:String,
+        required:[true,"Password required"]
+    },
     BloodGroup :{
         type:String,
         required:[true,"Blood Group required"]

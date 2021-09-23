@@ -5,9 +5,10 @@ const patientcontroller = require('../Controller/patientcontroller')
 
 // or const router = require('express').Router()
 
-router.get('/',usercontroller.all_users)
+router.get('/',patientcontroller.all_patients)
 router.post('/user',usercontroller.create_user)
 router.post('/create',patientcontroller.create_patient)
+router.post('/login',usercontroller.login_user)
 
 module.exports = router;
 
