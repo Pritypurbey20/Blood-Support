@@ -109,7 +109,7 @@
 }
 
 #card{
-	background-color:#f5f0f0;
+	
 	background-size: cover;
 }
 
@@ -118,6 +118,7 @@
 
 }
 #card-deck{
+	background-color:#f5f0f0;
 height: 300px;
 padding-top: 25px;
 
